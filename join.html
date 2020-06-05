@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+<style type="text/css">
+    /* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+</style>
+    
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+<div class="popup" onclick="myFunction()">Click me!>
+       <span class="popuptext" id="myPopup">Popup text...</span>
+        <div class="container">
+            <div class="signup-content">
+                <form method="POST" id="signup-form" class="signup-form" onclick="myFunction()">Click me!">
+                    <h2>Ready to change the world? </h2>
+                    <p class="desc">Destination: Humanity..<span>"JOIN NOW"</span></p>
+                    <div class="form-group">
+                        <input type="text" class="form-input" name="name" id="name" placeholder="First Name"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input" name="name" id="name" placeholder="Last Name"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" name="email" id="email" placeholder="Email"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input" name="password" id="password" placeholder="Password"/>
+                        <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input" name="password" id="password" placeholder="Re-Write Password"/>
+                        <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                        <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms and Condition</a></label>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="submit" id="submit" class="form-submit submit" value="Sign up"/>
+                        <a href="#" class="submit-link submit">Sign in</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>
+    </div>
+
+<script>
+// When the user clicks on <div>, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script
+    
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
